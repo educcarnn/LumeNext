@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { formatarData } from "../utils/dateUtils";
 
 type ClimaAtual = {
   location: {
@@ -70,11 +71,10 @@ function Tempo() {
   }
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-4 gap-6 p-5 bg-white shadow-md rounded-lg">
-        <aside className="col-span-1">
-          {/* Conteúdo da barra lateral */}
-        </aside>
+    <div className="min-h-screen flex justify-center items-center ">
+    <div className="w-full max-w-4xl flex flex-col items-center p-5 rounded-lg">
+      
+
         <main className="col-span-3">
           <header className="mb-5 text-center lg:text-left">
             {climaAtual && (
@@ -104,11 +104,11 @@ function Tempo() {
                 previsao.map((dia, index) => (
                   <article
                     key={index}
-                    className="mb-3 p-3 border rounded bg-blue-50"
+                    className="mb-3 p-3 border rounded bg-blue-50 dark:bg-gray-800"
                   >
-                    <p className="text-lg">
-                      {dia.date}:{" "}
-                      <span className="font-semibold text-blue-400">
+                    <p className="text-lg text-black">
+                      {formatarData(dia.date)}:{" "}
+                      <span className="font-semibold text-blue-400 dark:text-blue-300">
                         {dia.day.avgtemp_c}°C, {dia.day.condition.text}
                       </span>
                     </p>

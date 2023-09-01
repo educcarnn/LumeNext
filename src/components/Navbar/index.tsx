@@ -1,14 +1,21 @@
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import ThemeSwitch from "../Switch";
 
 export default function Navbar() {
+  const { theme, setTheme } = useTheme();
+
+  const isDark = theme === "dark";
+  const toggleTheme = () => setTheme(isDark ? "light" : "dark");
+
   return (
     <div>
       <nav className="bg-gray-800">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
+          <div className="relative flex h-16 items-center justify-between flex-wrap">
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div className="flex flex-shrink-0 items-center">
-                <span>Eduardo Carneiro</span>
+              <div className="flex flex-shrink-0 items-center mr-4">
+                <span className="text-white">Eduardo Carneiro</span>
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
@@ -30,10 +37,13 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              {/*  <Link href="/login">
-                                <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</span>
-                            </Link>*/}
+            <div className="flex items-center pr-2 sm:ml-6 sm:pr-0 sm:space-x-4">
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                <ThemeSwitch isDark={isDark} toggleTheme={toggleTheme} />
+              </button>
             </div>
           </div>
         </div>

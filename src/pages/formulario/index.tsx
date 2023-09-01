@@ -7,18 +7,19 @@ export default function Formulario() {
     email: "",
     mensagem: "",
     arquivo: null as File | null,
-  });
+  })
+
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const name = e.target.name;
-    const value = e.target.type === "file" ? e.target.files![0] : e.target.value;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+    const name = e.target.name
+    const value = e.target.type === "file" ? e.target.files![0] : e.target.value
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(formData);
-  };
+    e.preventDefault()
+    console.log(formData)
+  }
 
   return (
     <>
@@ -56,5 +57,5 @@ export default function Formulario() {
         </form>
       </div>
     </>
-  );
+  )
 }
