@@ -70,13 +70,13 @@ function Tempo() {
   }
 
   return (
-    <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-      <div className="bg-white shadow-md rounded-lg w-full md:w-3/4 lg:w-1/2 p-5">
-        <aside className="w-1/4 float-left mr-5">
+    <div className="min-h-screen flex justify-center items-center">
+      <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-4 gap-6 p-5 bg-white shadow-md rounded-lg">
+        <aside className="col-span-1">
           {/* Conteúdo da barra lateral */}
         </aside>
-        <main className="w-3/4 float-right">
-          <header className="mb-5">
+        <main className="col-span-3">
+          <header className="mb-5 text-center lg:text-left">
             {climaAtual && (
               <h1 className="text-3xl font-bold text-blue-700">
                 {climaAtual.location.name}
@@ -85,7 +85,6 @@ function Tempo() {
           </header>
           {climaAtual ? (
             <>
-          
               <p className="text-lg mb-2">
                 Temperatura Atual:{" "}
                 <span className="font-semibold text-blue-500">
