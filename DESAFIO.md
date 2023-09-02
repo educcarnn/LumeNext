@@ -1,20 +1,39 @@
-Desafio Técnico - Respostas
 Maior Dificuldade
 A maior dificuldade que enfrentei ao realizar o teste foi a integração com a API de do VIA CEP, porque era preciso integrar a lógica de busca ao colocar a rua, mas com isso era preciso deixar definido algum estado/cidade como referência. Com isso, decidi usar a Api do IBGE para essa consulta e mostrar os dados disponíveis de modo que ficou prático para o usuário fazer a busca.
 
+
+
 Funcionalidade e Bibliotecas
-No meu aplicativo, implementei uma funcionalidade para exibir as informações climáticas atuais e a previsão para os próximos dias. Para isso, utilizei as bibliotecas React e a API OpenWeatherMap.
 
-React: Escolhi o React devido à sua capacidade de criar interfaces de usuário reativas e componentizadas. Isso me permitiu dividir a aplicação em componentes reutilizáveis, facilitando a manutenção e a escalabilidade do código.
 
-OpenWeatherMap API: Optei por utilizar essa API para obter informações climáticas devido à sua ampla disponibilidade de dados atualizados e previsões precisas. A integração foi feita através de requisições HTTP assíncronas, e as informações foram apresentadas de forma clara e organizada na interface do usuário.
+
+- Next Js
+- Tailwind CSS
+- Typescript
+- Mobile First
+
+
+Bibliotecas
+OpenWeatherMap API: Optei por utilizar essa API para obter informações climáticas devido à sua ampla disponibilidade de dados atualizados e previsões precisas. 
+
+
+Via CEP API / IBGE API : Utilizei a API do Via CEP para obter informações de endereço. Através da API do IBGE, obtive dados sobre a localidade com base no estado informado, para gerar os estados correspondentes . Esses dados foram integrados à interface para enriquecer a experiência do usuário, proporcionando uma compreensão mais completa do local
+
 
 Daqui a 5 anos
 Daqui a 5 anos, me vejo como um profissional experiente e qualificado na área de desenvolvimento de software. Pretendo estar envolvido em projetos desafiadores que explorem tecnologias inovadoras, contribuindo para soluções criativas e impactantes. Além disso, pretendo continuar aprendendo e me atualizando constantemente, acompanhando as mudanças e avanços no campo da tecnologia.
 
-Melhoria na Experiência do Usuário
-Para melhorar a experiência do usuário na minha aplicação, adicionei elementos visuais e informativos que tornam a visualização das informações climáticas mais agradável e compreensível. Utilizei ícones de clima correspondentes às condições climáticas, juntamente com descrições claras. Além disso, organizei as informações em seções e utilizei cores para destacar os dados relevantes, facilitando a leitura e compreensão.
 
-A implementação de uma atualização automática das informações climáticas em intervalos regulares também foi uma forma de aprimorar a experiência do usuário, mantendo-o sempre informado sem a necessidade de interações repetidas.
+
+Melhoria na Experiência do Usuário(“Tchammmm!”)
+Para melhorar a experiência do usuário na minha aplicação, adicionei elementos visuais e informativos que tornam a visualização das informações climáticas mais agradável e compreensível. Utilizei ícones de clima correspondentes às condições climáticas, juntamente com descrições claras. 
+
 
 Através dessas melhorias, busquei proporcionar uma experiência de usuário intuitiva e informativa, tornando a interação com o aplicativo mais agradável e útil.
+
+Além da preocupação visual, teve implementos lógicicos: 
+Dark Mode: Implementei um modo escuro que pode ser alternado pelo usuário. Isso é especialmente relevante para usuários que preferem interfaces com menor luminosidade, contribuindo para a acessibilidade e conforto visual.
+
+Paginação na parte do CEP: Para melhorar a experiência do usuário, adicionei uma funcionalidade de paginação na exibição das informações do CEP. Como as informações podem ser extensas e detalhadas, a paginação permite uma visualização mais organizada, evitando sobrecarregar o usuário com uma única tela cheia de detalhes.
+
+Previsão para os Próximos 5 Dias baseada na Geolocalização do Usuário: Além de fornecer o clima atual, implementei uma funcionalidade que utiliza a geolocalização do usuário para exibir a previsão do tempo para os próximos 5 dias. Essa funcionalidade é enriquecida com as descrições das condições climáticas e ícones representativos para cada dia, permitindo que o usuário planeje suas atividades de acordo com a previsão.
