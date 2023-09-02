@@ -10,7 +10,7 @@ A maior dificuldade que enfrentei ao realizar o teste foi a integração com a A
 **Funcionalidades**
 
 ```
-Busca por CEP automática baseada na geolocalização 
+Mostragem do tempo atual e dos próximos baseado na geolocalização do usuário
 
 Mostragem de ruas baseado na pesquisa fornecida pela pessoa
 
